@@ -1,0 +1,85 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lipsum}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{graphicx}
+  \graphicspath{{images/}}
+\usepackage{indentfirst}
+\usepackage{amsmath, amssymb, physics}
+\usepackage{tikz, tkz-base, tkz-fct}
+  \usetikzlibrary{arrows,calc,patterns,shapes.geometric,automata,positioning}
+\usepackage{array}
+\usepackage{forest}
+\usepackage{tcolorbox}
+  \tcbuselibrary{theorems}
+  \newtcbtheorem
+    []% init options
+    {definition}% name
+    {Definição}% title
+    {%
+      colback=blue!15,
+      colframe=blue!35!black,
+    }% options
+    {def}% prefix
+  \newtcbtheorem
+    []% init options
+    {example}% name
+    {Exemplo}% title
+    {%
+      colback=yellow!70,
+      colframe=yellow!70!black,
+      coltext=black,
+      coltitle=black,
+    }% options
+    {def}% prefix
+
+\newcommand{\limit}[3]
+{\ensuremath{\lim_{#1 \rightarrow #2} #3}}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\newcommand{\maintitle}[2]{
+    \HRule\\[0.4cm]
+    \textbf{{\huge\bfseries #1} \\ [0.2cm]
+    #2} \\
+    \HRule\\[0.4cm]
+}
+
+\newcommand{\authordescription}[5]{
+    \textsc{\textbf{#1}} \textbf{(#2)} \\ [0.4cm]
+    \textsc{E-mail:} \href{mailto:#3}{#3} \\
+    \textsc{Site:} \href{https://#4}{#4} \\ [0.4cm]
+}
+
+\newcommand{\corolario}[2]{
+  \begin{definition}{\textbf{#1}}{label}
+    {#2}
+  \end{definition}
+}
+
+\newcommand{\newexample}[2]{
+  \begin{example}{\emph{#1}}{label}
+    {#2}
+  \end{example}
+}
+
+\title{\includegraphics[width=0.5\textwidth]{logo-cin.png} \\
+\maintitle{Título}{Subtítulo}}
+\author{\authordescription{Ricardo Bizerra de Lima Filho}{rblf}{rblf@cin.ufpe.br}{ricardobizerra.com.br} \\
+Descrição}
+\date{\today}
+
+\begin{document}
+
+  \maketitle
+
+  \newpage
+
+  \tableofcontents
+
+  \newpage
+  
+  \section{Seção 1}
+
+\end{document}
